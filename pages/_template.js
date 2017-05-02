@@ -8,7 +8,7 @@ class Template extends React.Component {
     const { children } = this.props;
 
     return (
-      <div className="code center mw7">
+      <div className="code center mw7-l pt4 ph4">
         <Nav {...this.props} />
         <div className="ph4 pv3">
           {children}

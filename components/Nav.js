@@ -7,11 +7,17 @@ class Nav extends Component {
   render() {
     return (
       <nav className="f3">
-        <p>const <strong>{config.siteAuthorShort}</strong> = (
-          <Link className="link dim dark-gray dib" to={prefixLink('/')} activeClassName="underline" onlyActiveOnIndex>blog</Link><span>, </span>
-          <Link className="link dim dark-gray dib" to={prefixLink('/readings/')} activeClassName="underline">readings</Link><span>, </span>
-          <Link className="link dim dark-gray dib" to={prefixLink('/about/')} activeClassName="underline">about me</Link>
-        ) &#61;&gt; &#123;</p>
+        const <strong>{config.siteAuthorShort}</strong> = (
+        <div className="ml4 ml0-ns dib-ns">
+          <Link className="link dim dark-gray" to={prefixLink('/')} activeClassName="underline" onlyActiveOnIndex>blog</Link><span>,</span>
+        </div>
+        <div className="ml4 ml1-ns dib-ns">
+          <Link className="link dim dark-gray" to={prefixLink('/readings/')} activeClassName="underline">readings</Link><span>,</span>
+        </div>
+        <div className="ml4 ml1-ns dib-ns">
+          <Link className="link dim dark-gray" to={prefixLink('/about/')} activeClassName="underline">about me</Link>
+        </div>
+        ) &#61;&gt; &#123;
       </nav>
     );
   }
