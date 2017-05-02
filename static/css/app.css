@@ -1,0 +1,5 @@
+@import './tachyons.css';
+
+.link:focus {
+  outline: none;
+}

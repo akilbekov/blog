@@ -1,0 +1,13 @@
+node_modules/
+npm-debug.log
+
+.eslintcache
+.todo
+.project
+
+public
+
+.gatsby-context.js
+pages/.manifest
+.idea
+gatsby-starter-lumen.iml
