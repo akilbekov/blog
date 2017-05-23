@@ -3,3 +3,7 @@
 .link:focus {
   outline: none;
 }
+
+.min-h-50 {
+  min-height: 50vh;
+}

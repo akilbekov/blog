@@ -91,10 +91,10 @@ After I started looking for react charting library. Unfortunately, there is not 
   </code>
 </pre>
 
-I think I spend most of the time formatting data to be consumed by charting component.
+I spend most of the time formatting data to be consumed by charting component.
 
 <img src="./app.jpg" alt="App">
 
 So far I like what I end up with, however with 8 sensors I have to make same amount fetch requests to thingspeak.com. And it's not fast, also it has limitation for request results.
 
-As next thing to do is to optimize request, by building simple API which will consolidate requests into one.
+As next thing to do is optimize requests, by building simple API which will consolidate requests into one.
