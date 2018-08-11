@@ -12,18 +12,15 @@ Hello, I’m Dauren. My main job is to help others with their infrastructure to 
 
 Big data, security, monitoring
 
-- consulting and hands-on implementation across a variety of practices, including, best practice consulting, key security controls, awareness and culture, and secure communication environments
+- consulting and hands-on implementation across a variety of practices, including, best practice consulting, key security controls, and secure communication environments
 - design and implementation of monitoring/security solutions
-- consulting on performance
-- automated deployment, testing, monitoring
-- working with customers to determine requirements and define the scope of
-  a project
+- working with customers to determine requirements and define the scope of a project
 
-### IT Beaver, Contract Rails Developer, Oct 2016 – Mar 2017
+### IT Beaver, Contract Fullstack Developer, Oct 2016 – Mar 2017
 
 Ruby, RoR, CSS, JS, React, TDD
 
-- support and fixing bugs in existing applications
+- supporting and fixing bugs in existing applications
 - covering apps with tests
 
 ### KMG Solutions, Contract Engineer, Oct 2016 – Dec 2016
@@ -32,17 +29,17 @@ SharePoint, Windows Server, VM
 
 - migration and testing of the portal app
 
-###Asseco, Presales engineer, Nov 2012 – Jun 2014
+### Asseco, Presales engineer, Nov 2012 – Jun 2014
+
 Big data, security, monitoring, Windows Server
 
-- working with customers to determine requirements and define the scope of
-  a project
+- working with customers to determine requirements and define the scope of a project
 - presenting solutions in written or oral reports
 - design and implementation of the company’s internal infrastructure
 - organizing training for users
 - writing technical specifications for future projects
 - providing support to existing clients
-- development of security competence in the company
+- development of security competence at the company
 
 ### HP Software, Contract Engineer, Aug 2012 – Nov 2012
 
@@ -105,8 +102,10 @@ Utils (git, jest)
 <div class="row">
   <div class="col-3">
   <h3>Current studies, Est 2018</h3>
-    Splunk Architect
-    CISSP
+  <ul>
+    <li>Splunk Architect</li>
+    <li>CISSP</li>
+  </ul>
   </div>
   <div class="col-3">
   <h3>Certificates</h3>
