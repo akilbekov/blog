@@ -1,13 +1,9 @@
 node_modules/
+.cache/
+public/
 npm-debug.log
-
 .eslintcache
-.todo
-.project
-
-public
-
 .gatsby-context.js
-pages/.manifest
 .idea
 gatsby-starter-lumen.iml
+yarn.lock
