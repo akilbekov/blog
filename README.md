@@ -1,15 +1,7 @@
-# Personal [blog](https://dauren.xyz) made with [Gatsby](https://github.com/gatsbyjs/gatsby)
+#### Running in Development
 
-## Installing
+`gatsby develop`
 
-Clone the repo and then run:
-```
-yarn
-```
+#### Building
 
-## Running in development
-
-```
-gatsby develop
-```
-
+`gatsby build`
