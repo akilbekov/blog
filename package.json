@@ -16,9 +16,7 @@
   "keywords": [
     "gatsby",
     "blog",
-    "react",
-    "theme",
-    "starter"
+    "react"
   ],
   "author": "Dauren Akilbekov <akilbekov@gmail.com>",
   "license": "MIT",
@@ -46,7 +44,6 @@
     "gatsby-transformer-remark": "^1.7.28",
     "gatsby-transformer-sharp": "^1.6.16",
     "lodash": "^4.17.4",
-    "react": "^16.4.2",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
