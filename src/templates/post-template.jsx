@@ -42,7 +42,6 @@ export const pageQuery = graphql`
           label
           path
         }
-        disqusShortname
         url
       }
     }

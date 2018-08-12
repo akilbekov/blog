@@ -4,7 +4,6 @@ module.exports = {
     title: 'Blog by Dauren Akilbekov',
     subtitle: 'IT and Security Consultant, Web developer',
     copyright: '',
-    disqusShortname: '',
     menu: [
       {
         label: 'Articles',
@@ -128,6 +127,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: { trackingId: '' }
