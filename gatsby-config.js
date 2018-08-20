@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    url: 'http://dauren.xyz',
+    url: 'https://dauren.xyz',
     title: "Dauren's personal blog",
     subtitle: 'IT and Security Consultant, Web developer',
     copyright: '',

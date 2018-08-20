@@ -4,9 +4,9 @@ import PostTemplateDetails from '../components/PostTemplateDetails';
 
 class PostTemplate extends React.Component {
   render() {
-    const { title, subtitle } = this.props.data.site.siteMetadata;
+    const { title, subtitle, url } = this.props.data.site.siteMetadata;
     const post = this.props.data.markdownRemark;
-    const { title: postTitle, description: postDescription } = post.frontmatter;
+    const { title: postTitle, description: postDescription, image, path } = post.frontmatter;
     const description = postDescription !== null ? postDescription : subtitle;
 
     return (
@@ -15,7 +15,8 @@ class PostTemplate extends React.Component {
           <title>{`${postTitle} - ${title}`}</title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
-          <meta property="og:image" content={post.frontmatter.image.childImageSharp.resize.src} />
+          <meta property="og:url" content={`${url}${path}`} />
+          <meta property="og:image" content={`${url}${image.childImageSharp.resize.src}`} />
         </Helmet>
         <PostTemplateDetails {...this.props} />
       </div>
@@ -55,12 +56,13 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        path
         tags
         date
         description
         image {
           childImageSharp {
-            resize(width: 400, height: 400) {
+            resize(width: 1200, height: 630) {
               src
             }
           }
