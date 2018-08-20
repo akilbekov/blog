@@ -1,12 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PageTemplateDetails from '../components/PageTemplateDetails';
+import avatar from '../pages/avatar.jpg';
 
 class PageTemplate extends React.Component {
   render() {
     const { title, subtitle } = this.props.data.site.siteMetadata;
     const page = this.props.data.markdownRemark;
-    const { title: pageTitle, description: pageDescription, img: image } = page.frontmatter;
+    const { title: pageTitle, description: pageDescription } = page.frontmatter;
     const description = pageDescription !== null ? pageDescription : subtitle;
 
     return (
@@ -15,7 +16,7 @@ class PageTemplate extends React.Component {
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
-          <meta property="og:image" content={image} />
+          <meta property="og:image" content={avatar} />
         </Helmet>
         <PageTemplateDetails {...this.props} />
       </div>

@@ -5,7 +5,7 @@ layout: post
 draft: false
 path: '/posts/almaty-air/'
 category: 'Misc'
-img: './sensors.jpg'
+image: './sensors.jpg'
 description: 'Air pollution problem become very popular in Almaty in recent years. It is noticable especially in autumn and winters, when people from lower parts of the city use coal in their heating systems'
 tags:
   - 'Web'

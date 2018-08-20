@@ -6,7 +6,7 @@ draft: false
 path: '/posts/hello-world/'
 category: 'Misc'
 description: 'Hello world!'
-img: './me.jpg'
+image: './me.jpg'
 tags:
   - 'Personal'
 ---

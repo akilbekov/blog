@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
+import avatar from './avatar.jpg';
 
 class IndexRoute extends React.Component {
   render() {
@@ -18,7 +19,7 @@ class IndexRoute extends React.Component {
           <title>{title}</title>
           <meta name="description" content={subtitle} />
           <meta property="og:title" content={title} />
-          <meta property="og:image" content="./avatar.jpg" />
+          <meta property="og:image" content={avatar} />
         </Helmet>
         <Sidebar {...this.props} />
         <div className="content">
