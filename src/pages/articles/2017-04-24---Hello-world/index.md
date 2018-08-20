@@ -1,13 +1,14 @@
 ---
-title: "Hello World"
-date: "2017-04-24T12:22:03.284Z"
+title: 'Hello World'
+date: '2017-04-24T12:22:03.284Z'
 layout: post
 draft: false
-path: "/posts/hello-world/"
-category: "Misc"
-description: "Hello world!"
+path: '/posts/hello-world/'
+category: 'Misc'
+description: 'Hello world!'
+image: './me.jpg'
 tags:
-  - "Personal"
+  - 'Personal'
 ---
 
 ![Dauren](./me.jpg)

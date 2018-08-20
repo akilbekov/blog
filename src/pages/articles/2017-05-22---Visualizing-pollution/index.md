@@ -1,13 +1,14 @@
 ---
-title: "Visualizing air pollution"
-date: "2017-05-22T16:30:57.126Z"
+title: 'Visualizing air pollution'
+date: '2017-05-22T16:30:57.126Z'
 layout: post
 draft: false
-path: "/posts/almaty-air/"
-category: "Misc"
-description: "Air pollution problem become very popular in Almaty in recent years. It is noticable especially in autumn and winters, when people from lower parts of the city use coal in their heating systems"
-tags: 
-  - "Web"
+path: '/posts/almaty-air/'
+category: 'Misc'
+image: './sensors.jpg'
+description: 'Air pollution problem become very popular in Almaty in recent years. It is noticable especially in autumn and winters, when people from lower parts of the city use coal in their heating systems'
+tags:
+  - 'Web'
 ---
 
 Air pollution problem become very popular in Almaty in recent years. It is noticable especially in autumn and winters, when people from lower parts of the city use coal in their heating systems.

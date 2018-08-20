@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PageTemplateDetails from '../components/PageTemplateDetails';
+import avatar from '../pages/avatar.jpg';
 
 class PageTemplate extends React.Component {
   render() {
@@ -14,6 +15,8 @@ class PageTemplate extends React.Component {
         <Helmet>
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
+          <meta property="og:title" content={title} />
+          <meta property="og:image" content={avatar} />
         </Helmet>
         <PageTemplateDetails {...this.props} />
       </div>
