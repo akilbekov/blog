@@ -14,9 +14,9 @@ tags:
 
 ### Docs
 
-I've started using Splunk half a year ago. So far, got Splunk Admin and few other partner accreditation, like Sales Engineer 1. I think the best place to learn Splunk is official [documentation](http://docs.splunk.com/Documentation).
+I've started using Splunk half a year ago. So far, got Splunk Admin and few other partner accreditation, like Sales Engineer 1. Currently I'm preparing for Splunk Architect Exam/Lab. For me the best place to learn Splunk, is official [documentation](http://docs.splunk.com/Documentation).
 
-It is good idea to look at Splunk [best practices doc](https://wiki.splunk.com/Deploy:More_best_practices_and_processes), because sometimes admins develop their own "best practices" and can it can be suboptimal.
+It is a good idea to check Splunk's [best practices doc](https://wiki.splunk.com/Deploy:More_best_practices_and_processes), because sometimes admins develop their own "best practices" and that can be suboptimal.
 
 ### Answers
 
@@ -26,14 +26,18 @@ Other places to look [Answers](https://answers.splunk.com) - the stackoverflow-l
 
 ![.conf](conf.png)
 
-**.conf** is a annual conference where Splunk announces new features, experts give talks on different subject from monitoring to securtiy. Almost all talks were recorded and have slides shared, as expected there is [app](https://splunkbase.splunk.com/app/3330/) for the conference. As a daily routine I randomly (this apps needs "random" button) watch one talk. Some of the talks [1](https://conf.splunk.com/files/2017/slides/searching-fast-how-to-start-using-tstats-and-other-acceleration-techniques.pdf), [2](https://conf.splunk.com/files/2017/slides/effectively-enhancing-our-soc-with-sysmon-powershell-logging-and-machine-learning-to-detect-and-respond-to-todays-threats.pdf) are amazing and cover things not in docs or courses.
+**.conf** is an annual conference where Splunk announces new features, experts give talks on different subject from monitoring to securtiy. Almost all talks are recorded and have slides shared. As expected there is [app](https://splunkbase.splunk.com/app/3330/) for the conference. My daily routine includes watching random (this apps needs "random" button) talk. Some of the talks [1](https://conf.splunk.com/files/2017/slides/searching-fast-how-to-start-using-tstats-and-other-acceleration-techniques.pdf), [2](https://conf.splunk.com/files/2017/slides/effectively-enhancing-our-soc-with-sysmon-powershell-logging-and-machine-learning-to-detect-and-respond-to-todays-threats.pdf) are amazing and cover things, that are not in docs or courses.
 
 ### Courses
 
 Splunk offers free Fundamentals 1 and Fundamentals 2 (if you are a partner), which correspond to Splunk User and Power User certifications.
-In my oppinion these two are the best courses to get started. Admin and Architect courses are ok. Starting Autumn 2018, Splunk will use PearsonVUE as platform for certification.
+In my opinion these two are the best courses to get started fast. Admin and Architect courses are ok. Starting Autumn 2018, Splunk will use PearsonVUE as platform for certification.
 
 There are also courses available on a partner portal, mainly for partner accreditations.
+
+### Youtube
+
+Splunk has channels with [news](https://www.youtube.com/user/splunkvideos) and [how-tos](https://www.youtube.com/channel/UCjwOFZzLPnji1EstaVyyvAw).
 
 ### Books
 
