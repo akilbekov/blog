@@ -6,6 +6,7 @@ category: 'Learning'
 layout: post
 draft: false
 description: 'Improving my Splunk skills 1 search at a time'
+img: './conf.png'
 tags:
   - 'Splunk'
   - 'Admin'

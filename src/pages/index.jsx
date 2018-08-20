@@ -17,6 +17,8 @@ class IndexRoute extends React.Component {
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={subtitle} />
+          <meta property="og:title" content={title} />
+          <meta property="og:image" content="./avatar.jpg" />
         </Helmet>
         <Sidebar {...this.props} />
         <div className="content">

@@ -6,7 +6,7 @@ class PageTemplate extends React.Component {
   render() {
     const { title, subtitle } = this.props.data.site.siteMetadata;
     const page = this.props.data.markdownRemark;
-    const { title: pageTitle, description: pageDescription } = page.frontmatter;
+    const { title: pageTitle, description: pageDescription, img: image } = page.frontmatter;
     const description = pageDescription !== null ? pageDescription : subtitle;
 
     return (
@@ -14,6 +14,8 @@ class PageTemplate extends React.Component {
         <Helmet>
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
+          <meta property="og:title" content={title} />
+          <meta property="og:image" content={image} />
         </Helmet>
         <PageTemplateDetails {...this.props} />
       </div>

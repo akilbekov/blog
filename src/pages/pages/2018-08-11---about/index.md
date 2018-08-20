@@ -1,7 +1,8 @@
 ---
-title: "About me"
+title: 'About me'
 layout: page
-path: "/about"
+path: '/about'
+img: '../../avatar.jpg'
 ---
 
 Hello, I’m Dauren. My main job is to help others with their infrastructure to be secure and reliable.
