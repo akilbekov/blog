@@ -18,7 +18,7 @@ Recently Splunk introduced metrics - very fast compared to traditional event ind
 
 ## Configure HEC on Splunk
 
-On the Splunk side we need to enable HEC to reveive data sent from collectd enabled host. First create metrics index and then follow this [guide](http://docs.splunk.com/Documentation/Splunk/7.2.1/Metrics/GetMetricsInCollectd#Configure_the_HTTP_Event_Collector_.28HEC.29_data_input).
+On the Splunk side we need to enable HEC to receive data sent from collectd enabled host. First create metrics index and then follow this [guide](http://docs.splunk.com/Documentation/Splunk/7.2.1/Metrics/GetMetricsInCollectd#Configure_the_HTTP_Event_Collector_.28HEC.29_data_input).
 
 ## collectd configuration
 
@@ -29,7 +29,7 @@ Download and install **collectd** and plugins on the host which will poll SNMP d
 # yum install collectd
 ```
 
-Download [Splunk App for Infrastructure](https://splunkbase.splunk.com/app/3975/) and extract /splunk_app_infrastructure/appserver/static/unix_agent/unix-agent.tgz. Copy **write_splunk.so** to /usr/lib/collectd/. This path can be different consult #PluginDir line in collectd.conf or change it to your liking. The plugin works as write_http, but can add dimensions to sent metrics.
+Download [Splunk App for Infrastructure](https://splunkbase.splunk.com/app/3975/) and extract /splunk\_app\_infrastructure/appserver/static/unix_agent/unix-agent.tgz. Copy **write_splunk.so** to /usr/lib/collectd/. This path can be different consult #PluginDir line in collectd.conf or change it to your liking. The plugin works as write_http, but can add dimensions to sent metrics.
 
 and SNMP packages:
 
@@ -97,8 +97,8 @@ Now we enable and start collectd service:
 # systemctl start collectd.service
 ```
 
-## Metrcis Workspace
+## Metrics Workspace
 
 ![Metrics Workspace](workspace.png)
 
-The best way to start to work with the metrics vizualisation is to install [Metrcis Workspace](https://splunkbase.splunk.com/app/4192/) app. This app will add tab to your search app, it automatically pulls your metrics and gives you easy to use interface for visualizing them.
+The best way to start to work with the metrics vizualisation is to install [Metrics Workspace](https://splunkbase.splunk.com/app/4192/) app. This app will add tab to your search app, it automatically pulls your metrics and gives you easy to use interface for visualizing them.
