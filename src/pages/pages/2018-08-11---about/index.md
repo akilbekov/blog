@@ -111,11 +111,13 @@ Utils (git, jest)
   <h3>Certificates</h3>
     <ul>
       <li>Splunk Certified Admin</li>
+      <li>Splunk Sales Engineer I</li>
       <li>MCTS AD/NI 2008</li>
       <li>LoadRunner AIS</li>
       <li>SiteScope AIS</li>
       <li>CCNA/JNCIA</li>
       <li>ITILv3 2011</li>
+      <li>HP Technical Certified I, ArcSight Security [2013]</li>
     </ul>
   </div>
   <div class="col-3">
