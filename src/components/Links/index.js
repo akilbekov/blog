@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { Github, Gmail, Stackoverflow, Rss, Linkedin } from '../Icons';
+import { Github, Gmail, Stackoverflow, Linkedin } from '../Icons';
 
 class Links extends React.Component {
   render() {
