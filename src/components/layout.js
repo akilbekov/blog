@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import '../assets/scss/init.scss';
 
 class Layout extends React.Component {
@@ -12,7 +12,7 @@ class Layout extends React.Component {
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Dauren's personal blog" />
         </Helmet>
-        {children()}
+        {children}
       </div>
     );
   }

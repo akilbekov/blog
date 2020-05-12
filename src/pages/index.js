@@ -1,7 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
+import Layout from '../components/layout';
 import avatar from './avatar.jpg';
 
 class IndexRoute extends React.Component {
@@ -9,12 +11,12 @@ class IndexRoute extends React.Component {
     const items = [];
     const { title, subtitle } = this.props.data.site.siteMetadata;
     const posts = this.props.data.allMarkdownRemark.edges;
-    posts.forEach(post => {
+    posts.forEach((post) => {
       items.push(<Post data={post} key={post.node.fields.slug} />);
     });
 
     return (
-      <div>
+      <Layout>
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={subtitle} />
@@ -27,7 +29,7 @@ class IndexRoute extends React.Component {
             <div className="page">{items}</div>
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }
@@ -49,7 +51,6 @@ export const pageQuery = graphql`
           name
           email
           github
-          rss
           so
           linkedin
         }

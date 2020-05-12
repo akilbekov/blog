@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Sidebar from '../Sidebar';
 import moment from 'moment';
 import './style.scss';

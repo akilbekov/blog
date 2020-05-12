@@ -1,27 +1,28 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Sidebar from '../components/Sidebar';
-import TagTemplateDetails from '../components/TagTemplateDetails';
+import CategoryTemplateDetails from '../components/CategoryTemplateDetails';
+import { graphql } from 'gatsby';
 
-class TagTemplate extends React.Component {
+class CategoryTemplate extends React.Component {
   render() {
     const { title } = this.props.data.site.siteMetadata;
-    const { tag } = this.props.pathContext;
+    const { category } = this.props.pageContext;
 
     return (
       <div>
-        <Helmet title={`All Posts tagged as "${tag}" - ${title}`} />
+        <Helmet title={`${category} - ${title}`} />
         <Sidebar {...this.props} />
-        <TagTemplateDetails {...this.props} />
+        <CategoryTemplateDetails {...this.props} />
       </div>
     );
   }
 }
 
-export default TagTemplate;
+export default CategoryTemplate;
 
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
+  query CategoryPage($category: String) {
     site {
       siteMetadata {
         title
@@ -43,7 +44,9 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      filter: { frontmatter: { tags: { in: [$tag] }, layout: { eq: "post" }, draft: { ne: true } } }
+      filter: {
+        frontmatter: { category: { eq: $category }, layout: { eq: "post" }, draft: { ne: true } }
+      }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

@@ -1,10 +1,12 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Sidebar from '../components/Sidebar';
+import Layout from '../components/layout';
 
 class NotFoundRoute extends React.Component {
   render() {
     return (
-      <div>
+      <Layout>
         <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
@@ -16,7 +18,7 @@ class NotFoundRoute extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }

@@ -1,6 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
+import avatar from '../pages/avatar.jpg';
 import PostTemplateDetails from '../components/PostTemplateDetails';
+import Layout from '../components/layout';
 
 class PostTemplate extends React.Component {
   render() {
@@ -10,16 +13,19 @@ class PostTemplate extends React.Component {
     const description = postDescription !== null ? postDescription : subtitle;
 
     return (
-      <div>
+      <Layout>
         <Helmet>
           <title>{`${postTitle} - ${title}`}</title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} />
           <meta property="og:url" content={`${url}${path}`} />
-          <meta property="og:image" content={`${url}${image.childImageSharp.resize.src}`} />
+          <meta
+            property="og:image"
+            content={image != null ? `${url}${image.childImageSharp.resize.src}` : avatar}
+          />
         </Helmet>
         <PostTemplateDetails {...this.props} />
-      </div>
+      </Layout>
     );
   }
 }

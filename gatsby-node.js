@@ -9,10 +9,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('./src/templates/post-template.jsx');
-    const pageTemplate = path.resolve('./src/templates/page-template.jsx');
-    const tagTemplate = path.resolve('./src/templates/tag-template.jsx');
-    const categoryTemplate = path.resolve('./src/templates/category-template.jsx');
+    const postTemplate = path.resolve('./src/templates/post-template.js');
+    const pageTemplate = path.resolve('./src/templates/page-template.js');
+    const tagTemplate = path.resolve('./src/templates/tag-template.js');
+    const categoryTemplate = path.resolve('./src/templates/category-template.js');
 
     graphql(`
       {
@@ -31,24 +31,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       if (result.errors) {
-        console.log(result.errors);
+        // console.log(result.errors);
         reject(result.errors);
       }
 
-      _.each(result.data.allMarkdownRemark.edges, edge => {
+      _.each(result.data.allMarkdownRemark.edges, (edge) => {
         if (_.get(edge, 'node.frontmatter.layout') === 'page') {
           createPage({
             path: edge.node.fields.slug,
             component: slash(pageTemplate),
-            context: { slug: edge.node.fields.slug }
+            context: { slug: edge.node.fields.slug },
           });
         } else if (_.get(edge, 'node.frontmatter.layout') === 'post') {
           createPage({
             path: edge.node.fields.slug,
             component: slash(postTemplate),
-            context: { slug: edge.node.fields.slug }
+            context: { slug: edge.node.fields.slug },
           });
 
           let tags = [];
@@ -57,12 +57,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
 
           tags = _.uniq(tags);
-          _.each(tags, tag => {
+          _.each(tags, (tag) => {
             const tagPath = `/tags/${_.kebabCase(tag)}/`;
             createPage({
               path: tagPath,
               component: tagTemplate,
-              context: { tag }
+              context: { tag },
             });
           });
 
@@ -72,12 +72,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
 
           categories = _.uniq(categories);
-          _.each(categories, category => {
+          _.each(categories, (category) => {
             const categoryPath = `/categories/${_.kebabCase(category)}/`;
             createPage({
               path: categoryPath,
               component: categoryTemplate,
-              context: { category }
+              context: { category },
             });
           });
         }
@@ -104,11 +104,11 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: slug
+      value: slug,
     });
 
     if (node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${_.kebabCase(tag)}/`);
+      const tagSlugs = node.frontmatter.tags.map((tag) => `/tags/${_.kebabCase(tag)}/`);
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
     }
 
@@ -143,13 +143,13 @@ exports.modifyWebpackConfig = ({ config }) => {
           'padding-right',
           'border-radius',
           'width',
-          'max-width'
+          'max-width',
         ],
         selectorBlackList: [],
         replace: true,
         mediaQuery: false,
-        minPixelValue: 0
-      })
-    ]
+        minPixelValue: 0,
+      }),
+    ],
   });
 };
