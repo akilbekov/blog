@@ -18,7 +18,7 @@ After some googling I found yumdownloadonly, yumdownloader. They are part of yum
 
 The following will only download package and dependencies:
 
-```sh
+```bash
 $ sudo yum install --downloadonly --downloaddir=. mariadb-server
 
 Total download size: 21 M
@@ -40,7 +40,7 @@ exiting because "Download Only" specified
 
 Then copy to offline machine and run:
 
-```sh
+```bash
 $ sudo rpm -hiv *.rpm
 
 Preparing...                          ######################## [100%]
@@ -58,7 +58,7 @@ Updating / installing...
 
 Check if installed correctly:
 
-```sh
+```bash
 $ mysql_secure_installation
 
 NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB

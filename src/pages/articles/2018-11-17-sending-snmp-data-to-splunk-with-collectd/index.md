@@ -24,29 +24,29 @@ On the Splunk side we need to enable HEC to receive data sent from collectd enab
 
 Download and install **collectd** and plugins on the host which will poll SNMP devices:
 
-```sh
+```bash
 # yum install epel-release
 # yum install collectd
 ```
 
-Download [Splunk App for Infrastructure](https://splunkbase.splunk.com/app/3975/) and extract /splunk\_app\_infrastructure/appserver/static/unix_agent/unix-agent.tgz. Copy **write_splunk.so** to /usr/lib/collectd/. This path can be different consult #PluginDir line in collectd.conf or change it to your liking. The plugin works as write_http, but can add dimensions to sent metrics.
+Download [Splunk App for Infrastructure](https://splunkbase.splunk.com/app/3975/) and extract /splunk_app_infrastructure/appserver/static/unix_agent/unix-agent.tgz. Copy **write_splunk.so** to /usr/lib/collectd/. This path can be different consult #PluginDir line in collectd.conf or change it to your liking. The plugin works as write_http, but can add dimensions to sent metrics.
 
 and SNMP packages:
 
-```sh
+```bash
 # yum install net-snmp net-snmp-libs net-snmp-utils
 ```
 
 To use MIBs, put them in default directories:
 
-```sh
+```bash
 $HOME/.snmp/mibs
 /usr/local/share/snmp/mibs
 ```
 
 Configure SNMP plugin and sending data to Splunk:
 
-```sh
+```bash
 # cd /etc/collectd/collectd.conf.d
 # vim snmp.conf
 ```
@@ -92,7 +92,7 @@ LoadPlugin snmp
 
 Now we enable and start collectd service:
 
-```sh
+```bash
 # systemctl enable collectd.service
 # systemctl start collectd.service
 ```
