@@ -8,13 +8,13 @@ $color-primary: #008dd5;
 $color-secondary: #f56476;
 
 $color-white: lighten($color-base, 100%);
-$color-gray: lighten($color-base, 40%);
+$color-gray: lighten($color-base, 20%);
 $color-gray-border: lighten($color-base, 50%);
 $color-gray-bg: lighten($color-base, 60%);
 
 // Typographic
 $typographic-font-family: 'Space Mono', monospace, sans-serif;
-
+$typographic-font-family-body: system-ui, -apple-system, sans-serif;
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 16px;
 $typographic-small-font-size: 14px;
