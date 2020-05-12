@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import './style.scss';
 
 class Menu extends React.Component {
@@ -8,7 +8,7 @@ class Menu extends React.Component {
 
     const menuBlock = (
       <ul className="menu__list">
-        {menu.map(item => (
+        {menu.map((item) => (
           <li className="menu__list-item" key={item.path}>
             <Link
               exact

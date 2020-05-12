@@ -1,7 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import PageTemplateDetails from '../components/PageTemplateDetails';
 import avatar from '../pages/avatar.jpg';
+import Layout from '../components/layout';
 
 class PageTemplate extends React.Component {
   render() {
@@ -11,7 +13,7 @@ class PageTemplate extends React.Component {
     const description = pageDescription !== null ? pageDescription : subtitle;
 
     return (
-      <div>
+      <Layout>
         <Helmet>
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
@@ -19,7 +21,7 @@ class PageTemplate extends React.Component {
           <meta property="og:image" content={avatar} />
         </Helmet>
         <PageTemplateDetails {...this.props} />
-      </div>
+      </Layout>
     );
   }
 }
