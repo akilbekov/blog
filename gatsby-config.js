@@ -89,33 +89,85 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         query: `
-            {
-              site {
-                siteMetadata {
-                  url
+          {
+            site {
+              siteMetadata {
+                siteUrl: url
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              edges {
+                node {
+                  path
                 }
               }
-              allSitePage(
-                filter: {
-                  path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
-                }
-              ) {
-                edges {
-                  node {
-                    path
+            }
+          }
+        `,
+        output: '/sitemap.xml',
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map((edge) => ({
+            url: site.siteMetadata.siteUrl + edge.node.path,
+            changefreq: 'daily',
+            priority: 0.7,
+          })),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                site_url: url
+                title
+                description: subtitle
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map((edge) => ({
+                ...edge.node.frontmatter,
+                description: edge.node.frontmatter.description,
+                date: edge.node.frontmatter.date,
+                url: site.siteMetadata.site_url + edge.node.fields.slug,
+                guid: site.siteMetadata.site_url + edge.node.fields.slug,
+                custom_elements: [{ 'content:encoded': edge.node.html }],
+              })),
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        description
+                      }
+                    }
                   }
                 }
               }
-          }`,
-        output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.url + edge.node.path,
-              changefreq: 'daily',
-              priority: 0.7,
-            };
-          }),
+            `,
+            output: '/rss.xml',
+            title: "Dauren's personal blog",
+          },
+        ],
       },
     },
     'gatsby-plugin-offline',
